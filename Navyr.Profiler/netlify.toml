@@ -1,2 +1,12 @@
 [build]
-  publish = "navyr.profiler"
+  publish = "."
+
+[[redirects]]
+  from = "/navyr-profiler"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/navyr-profiler.html"
+  to = "/"
+  status = 301
