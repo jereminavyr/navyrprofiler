@@ -398,8 +398,18 @@
         iframe.addEventListener('load', function() {
             setTimeout(() => {
                 loading.classList.add('hidden');
+                // Ensure no blocking after load
+                loading.style.pointerEvents = 'none';
+                loading.style.display = 'none';
             }, 500);
         });
+
+        // Fallback: Remove loading overlay after 3 seconds regardless
+        setTimeout(() => {
+            loading.classList.add('hidden');
+            loading.style.pointerEvents = 'none';
+            loading.style.display = 'none';
+        }, 3000);
 
         // Update logo when uploaded
         // To use your logo, replace the src in the HTML above with:
